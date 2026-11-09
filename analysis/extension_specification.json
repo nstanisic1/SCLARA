@@ -1,0 +1,185 @@
+{
+  "schema": "sclara-extension-design-1",
+  "development_timing": "Specified after inspection of the original Swedish profiles and inherited evaluations, before computing these sensitivity and simulation results. This is a prospective specification of extensions, not preregistration of the discovery or independent confirmation.",
+  "reference": "The common and later definitions, transforms, lineage contrasts and prior scales in specification.json remain fixed. All defined contrasts are retained; focal comparisons determine presentation, not which results are saved.",
+  "branch_resolution": {
+    "caps": [
+      2,
+      5
+    ],
+    "categories": "Preserve the eight existing categories at every coarsening step; no upstream record is assigned to an unobserved descendant.",
+    "cohorts": [
+      "full_cut",
+      "baseline_records_at_cut"
+    ],
+    "shared_record_rule": "First construct the full cap cohort using the existing source grouping rules. In the companion cohort retain only baseline-fitted source-record memberships and their localities within those units, without reselecting tree leaves. Preserve the full-cut dependence blocks and report lost baseline records. This isolates aggregation on the retained shared records from recovery of additional origins as far as these mappings permit.",
+    "common_designs": [
+      "linear_0",
+      "linear_100000",
+      "quadratic_0",
+      "quadratic_100000"
+    ],
+    "later_designs": [
+      "viking_primary",
+      "viking_companion",
+      "medieval_primary",
+      "medieval_companion"
+    ],
+    "conditional_fits": 32,
+    "posterior_designs": [
+      "linear_0",
+      "linear_100000",
+      "viking_primary",
+      "medieval_primary"
+    ],
+    "posterior_cohort": "full_cut",
+    "posterior_fits": 8,
+    "posterior_seed_base": 2026110700,
+    "regional_reference": "Keep all existing reference cell centers. Any newly occupied cell uses one-per-screened-source-record reference weighting, without lineage labels; compute those new centers once from all screened origins and freeze them for both caps and cohorts. Retain common nonarchaeological/nuisance scales and the baseline quadratic-coordinate transformation.",
+    "later_density_reference": "The original canonical paternal positions remain the density reference when evaluating added origins; do not redefine registry density at each branch cut.",
+    "support_gate": {
+      "minimum_units_each_category": 10,
+      "minimum_blocks_each_category": 3
+    },
+    "crossed_dependence": {
+      "cohort": "full_cut",
+      "designs": [
+        "linear_0",
+        "viking_primary",
+        "medieval_primary"
+      ],
+      "replicates_per_design": 400,
+      "maximum_fits": 2400,
+      "seed_base": 2026111700,
+      "rule": "Independent exponential weights for whole dependence blocks and 200-km centroid cells, multiplied and normalized to the retained unit count. Use the reconstructed cut blocks, the original grid and fixed transformed measurements."
+    },
+    "focal_contrasts": [
+      "Late_Neolithic__PC3__I1_vs_R1a_Z284",
+      "Late_Neolithic_minus_Roman_Iron_Age__PC3__I1_vs_R1a_Z284",
+      "I1_L22_vs_I1_Z58",
+      "R1a_Z284_vs_R1b_U106",
+      "R1b_U106_vs_R1b_P312"
+    ]
+  },
+  "common_support": {
+    "periods": [
+      "Late_Neolithic",
+      "Roman_Iron_Age"
+    ],
+    "recording_radius_km": 75,
+    "minimum_recorded_sites_each_period": 1,
+    "minimum_draw_fraction_each_period": 0.5,
+    "unit_rule": "Every reported locality of a unit must have at least one recorded site within the existing recording radius in at least half the paired draws in each of the two periods. Retain the whole unit or omit it; do not trim alternative localities.",
+    "measurement": "Subset the existing four-period design without refitting the archaeological basis, centering, control transforms, regional parameterization or composite lineage weights.",
+    "designs": [
+      "linear_0",
+      "linear_100000",
+      "quadratic_0",
+      "quadratic_100000"
+    ],
+    "conditional_fits": 4,
+    "support_gate": {
+      "minimum_units_each_category": 10,
+      "minimum_blocks_each_category": 3
+    },
+    "crossed_dependence": {
+      "designs": [
+        "linear_0",
+        "linear_100000"
+      ],
+      "replicates_per_design": 399,
+      "maximum_fits": 798,
+      "rule": "Restrict the original deterministic block/cell weights to retained units and renormalize to the subset unit count. Retain all replicates."
+    },
+    "focal_contrast": "Late_Neolithic_minus_Roman_Iron_Age__PC3__I1_vs_R1a_Z284",
+    "interpretation": "Sensitivity to shared local recording opportunity. This changes the represented geographical population and does not eliminate environmental or historical confounding."
+  },
+  "method_benchmark": {
+    "design": "Current common four-period, three-component model on the original grid; reuse frozen transformed covariates and locality/unit structure.",
+    "methods": [
+      "unit_locality_mixture",
+      "unit_mean_locality",
+      "source_record_weighted_mixture"
+    ],
+    "replicates_per_condition": 200,
+    "seed_base": 2026112700,
+    "conditions": [
+      {
+        "name": "clean_null",
+        "localities": "unit_mean",
+        "multiplicity": "one",
+        "effect": 0,
+        "block_sd": 0
+      },
+      {
+        "name": "clean_effect",
+        "localities": "unit_mean",
+        "multiplicity": "one",
+        "effect": 0.4,
+        "block_sd": 0
+      },
+      {
+        "name": "alternative_origins_null",
+        "localities": "observed",
+        "multiplicity": "one",
+        "effect": 0,
+        "block_sd": 0
+      },
+      {
+        "name": "alternative_origins_effect",
+        "localities": "observed",
+        "multiplicity": "one",
+        "effect": 0.4,
+        "block_sd": 0
+      },
+      {
+        "name": "source_multiplicity_null",
+        "localities": "observed",
+        "multiplicity": "observed_source_records",
+        "effect": 0,
+        "block_sd": 0
+      },
+      {
+        "name": "source_multiplicity_effect",
+        "localities": "observed",
+        "multiplicity": "observed_source_records",
+        "effect": 0.4,
+        "block_sd": 0
+      },
+      {
+        "name": "block_dependence_null",
+        "localities": "observed",
+        "multiplicity": "observed_source_records",
+        "effect": 0,
+        "block_sd": 0.5
+      },
+      {
+        "name": "block_dependence_effect",
+        "localities": "observed",
+        "multiplicity": "observed_source_records",
+        "effect": 0.4,
+        "block_sd": 0.5
+      }
+    ],
+    "maximum_method_fits": 4800,
+    "truth": "Category intercepts use smoothed empirical category proportions; remaining nuisance coefficients are fixed small seeded synthetic values. All archaeological coefficients are zero except the specified I1–Z284 PC3 contrast, assigned +effect/2 in Late Neolithic and -effect/2 in Roman. Construct category coefficients so the frozen composite contrast has exactly those values. Other components and periods have zero direct generating effects.",
+    "generating_probability": "Generate one label per unit from the arithmetic mean of its locality category probabilities. In dependent conditions add a seeded multivariate block intercept to each locality before averaging. Source multiplicities repeat the unit label; they do not create independent outcomes.",
+    "evaluation": [
+      "conditional_mode_bias",
+      "root_mean_square_error",
+      "inverse_Hessian_95pct_coverage",
+      "interval_width",
+      "null_interval_exclusion",
+      "paired_predictive_log_score",
+      "paired_Brier_score",
+      "optimization_failure"
+    ],
+    "focal_estimands": [
+      "Late_Neolithic__PC3__I1_vs_R1a_Z284",
+      "Late_Neolithic_minus_Roman_Iron_Age__PC3__I1_vs_R1a_Z284"
+    ],
+    "scope": "Conditional mode/Hessian evaluation of specified estimator operations using current covariates; not MCMC calibration, archaeological profile-selection calibration, historical truth or independent validation.",
+    "failure_policy": "Retain unsuccessful fits and all defined conditions. Do not alter effect sizes, source multiplicities or conditions to obtain a method advantage.",
+    "measurement_contract_checks": "Separately verify shared-assay date allocation and invariance to duplicated source assertions, using finite synthetic archaeological inputs. Report these as measurement-contract checks, not extra fitted replications."
+  }
+}

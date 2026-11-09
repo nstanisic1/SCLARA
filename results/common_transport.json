@@ -1,0 +1,73 @@
+{
+  "units": 1335,
+  "origin_rows": 1594,
+  "represented_positions": 1399,
+  "weighting": "Equal total weight per unit, divided equally among its retained origins",
+  "variance_definition": "Within-period variance of draw-mean relative features on the frozen reference scales",
+  "coverage_definition": "Weight with draw-mean proximity at least exp(-2), equivalent to 100 km under the 50 km kernel",
+  "families": [
+    "postholes_building_traces",
+    "combustion_features",
+    "pits_occupation_deposits",
+    "heated_stone_accumulations",
+    "clearance_cultivation",
+    "burial_features",
+    "water_features"
+  ],
+  "periods": [
+    {
+      "period": "Late_Neolithic",
+      "retained_variance_fraction": 0.6515797416378228,
+      "proximity_equivalent_coverage_fraction": [
+        0.7124843945068584,
+        0.8757802746566632,
+        0.7803995006242086,
+        0.5084893882646715,
+        0.5385767790262185,
+        0.5431960049937588,
+        0.4091136079900156
+      ]
+    },
+    {
+      "period": "Bronze_Age",
+      "retained_variance_fraction": 0.5830608235390472,
+      "proximity_equivalent_coverage_fraction": [
+        0.8468164794007343,
+        0.9596754057428007,
+        0.8593008739076001,
+        0.7624219725343216,
+        0.7498127340823871,
+        0.7352059925093539,
+        0.5586766541822724
+      ]
+    },
+    {
+      "period": "Roman_Iron_Age",
+      "retained_variance_fraction": 0.5757494065135258,
+      "proximity_equivalent_coverage_fraction": [
+        0.8471910112359404,
+        0.9099875156054752,
+        0.8342072409487998,
+        0.4955056179775313,
+        0.7098626716604166,
+        0.775156054931325,
+        0.5785892634207234
+      ]
+    },
+    {
+      "period": "Migration",
+      "retained_variance_fraction": 0.5541913930829302,
+      "proximity_equivalent_coverage_fraction": [
+        0.838202247190997,
+        0.9632958801497923,
+        0.8126092384519219,
+        0.3870162297128616,
+        0.7373283395755211,
+        0.7345817727840105,
+        0.41772784019975345
+      ]
+    }
+  ],
+  "measurement_sha256": "7797028b899482ef4b5d627372cca8e52ec7d784bd66cbd63d9186b3e69420a5",
+  "specification_sha256": "68bb9eb65c80302ed72e644cc6b47b24ef7794e9da916eaf800a01992fdee369"
+}

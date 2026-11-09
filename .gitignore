@@ -1,0 +1,15 @@
+/docs/
+/.venv/
+/.Rproj.user/
+/.Rhistory
+/.RData
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+~$*.docx
+.DS_Store
+Thumbs.db
+/build/

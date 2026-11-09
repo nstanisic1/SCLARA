@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite this version of SCLARA and the original data sources listed in SOURCES.tsv."
+type: software
+repository-code: "https://github.com/nstanisic1/SCLARA"
+doi: "10.5281/zenodo.24088352"
+title: "SCLARA: Spatial Concordance Between Paternal Lineages and Stratified Archaeological Records"
+version: "2026.11.09.4"
+date-released: 2026-11-09
+authors:
+  - family-names: "Stanisic"
+    given-names: "Nemanja"
+    affiliation: "Singidunum University, Belgrade, Serbia"
+    email: "nstanisic@singidunum.ac.rs"
+license: MIT
+keywords:
+  - archaeology
+  - spatial analysis
+  - genetic genealogy
+  - reproducibility
